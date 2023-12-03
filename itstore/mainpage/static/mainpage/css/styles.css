@@ -1,0 +1,67 @@
+.main_body {
+  font-family: 'Impact', fantasy;
+  background-color: #262524;
+}
+
+.main_header_menu {
+  height: 60px;
+  display: flex;
+  border-bottom: 1px solid #3D3D3D;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.other_menu img {
+  width: 30px;
+  padding: 20px;
+  align-content: center;
+}
+
+.logo {
+  text-align: center;
+}
+
+
+.logo_name {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Arial Black', sans-serif;
+  color: #E7E7E7;
+}
+
+
+.input {
+  margin: 30px;
+  background: #767676;
+  border: none;
+  outline: none;
+  max-width: 290px;
+  padding: 10px 50px;
+  font-size: 12px;
+  border-radius: 9999px;
+  color: white;
+}
+
+.catalog {
+    align-items: center;
+}
+
+.button_catalog {
+    border-radius: 30px;
+    border: none;
+    color: #E7E7E7;
+    transition: .2s linear;
+    background: #767676;
+    padding: 10px 30px;
+}
+
+.button_catalog:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #767676;
+}
+
+
+.other_menu {
+  display: flex;
+}

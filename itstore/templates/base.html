@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" href="{% static 'mainpage/css/styles.css' %}" rel="stylesheet" />
+</head>
+<body class="main_body">
+<header class="header_menu">
+    <div class="main_header_menu">
+        <div class="logo">
+            <p><a class="logo_name" href="{% url 'home' %}">IT&#95;STORE</a></p>
+        </div>
+        <div class="catalog">
+            <button class="button_catalog">
+                Каталог
+            </button>
+        </div>
+        <div class="input_div">
+            <input placeholder="Пошук" class="input" name="text" type="text">
+        </div>
+        <div class="other_menu">
+            <div class="shopping">
+                <a href="#"><img src="{% static 'mainpage/images/shopping.png' %}"/></a>
+            </div>
+            <div class="heart">
+                <a href="#"><img src="{% static 'mainpage/images/heart.png' %}"/></a>
+            </div>
+            <div class="user">
+                <a href="#"><img src="{% static 'mainpage/images/user.png' %}"/></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+{% block header %} {% endblock %}
+
+
+</body>
+</html>
