@@ -1,43 +1,63 @@
-{% load static %}
-
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link type="text/css" href="{% static 'mainpage/css/styles.css' %}" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candleaf</title>
+    <link type="text/css" href="{% static 'mainpage/css/style.css' %}" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' />
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
 </head>
-<body class="main_body">
-<header class="header_menu">
-    <div class="main_header_menu">
-        <div class="logo">
-            <p><a class="logo_name" href="{% url 'home' %}">IT&#95;STORE</a></p>
-        </div>
-        <div class="catalog">
-            <button class="button_catalog">
-                Каталог
-            </button>
-        </div>
-        <div class="input_div">
-            <input placeholder="Пошук" class="input" name="text" type="text">
-        </div>
-        <div class="other_menu">
-            <div class="shopping">
-                <a href="#"><img src="{% static 'mainpage/images/shopping.png' %}"/></a>
+<body>
+<header>
+        <nav class="navbar">
+            <div class="container">
+                <img href="#" src="{% static 'mainpage/images/logo.png' %}" class="logo">
+                <div class="navbar-wrap">
+                    <ul class="navbar-menu">
+                        <li><a href="">Discovery</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact us</a></li>
+                        <li><a href="">Ukrainian version</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-add">
+                    <img src="{% static 'mainpage/images/acc.png' %}" href="#" class="account">
+                    <img src="{% static 'mainpage/images/bask.png' %}" href="#" class="basket">
+                </div>
             </div>
-            <div class="heart">
-                <a href="#"><img src="{% static 'mainpage/images/heart.png' %}"/></a>
-            </div>
-            <div class="user">
-                <a href="#"><img src="{% static 'mainpage/images/user.png' %}"/></a>
-            </div>
-        </div>
-    </div>
+        </nav>
 </header>
 
+{% block body %} {% endblock %}
 
-{% block header %} {% endblock %}
-
+<footer>
+    <div class="footer-logo-container">
+        <div class="footer-logo">
+            <img src="{% static 'mainpage/images/footer logo.png' %}">
+            <h3>Your natural candle made for<br /> your home and for your wellness.</h3>
+        </div>
+        <ul class="footer-ul">
+            <li><span>Discovery</span></li>
+            <li>New season</li>
+            <li>Most searched</li>
+            <li>Most selled</li>
+        </ul>
+        <ul class="footer-ul">
+            <li><span>About</span></li>
+            <li>Help</li>
+            <li>Shipping</li>
+            <li>Affiliate</li>
+        </ul>
+        <ul class="footer-ul">
+            <li><span>Info</span></li>
+            <li>Contact us</li>
+            <li>Privacy Policies</li>
+            <li>Terms & Conditions</li>
+        </ul>
+    </div>
+</footer>
 
 </body>
 </html>

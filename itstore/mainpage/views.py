@@ -1,9 +1,13 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, get_object_or_404
 from .models import Products
 
 
 def index(request):
-    return render(request, 'mainpage/index.html')
+    data = Products.objects.all()
+    context = {
+        'products': data,
+    }
+    return render(request, 'mainpage/index.html', context=context)
 
 
 def about(request):
