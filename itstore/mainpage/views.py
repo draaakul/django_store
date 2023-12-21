@@ -18,9 +18,10 @@ def about(request):
     return render(request, 'mainpage/about.html')
 
 
-def detail(request):
-    # product = Products.objects.get(id=product_id)
-    # context = {
-    #     'product': product
-    # }
-    return render(request, 'mainpage/detail.html')
+def detail(request, detail_slug):
+    slug_detail = get_object_or_404(Product, slug=detail_slug)
+
+    data = {
+        'post': slug_detail,
+    }
+    return render(request, 'mainpage/detail.html', context=data)

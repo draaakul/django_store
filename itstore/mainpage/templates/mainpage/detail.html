@@ -1,6 +1,15 @@
 {% extends 'base.html'%}
-{% block header %}
+{% block bode %}
 
-<h1>А тут у нас будет инфа о разных продуктах</h1>
+<div class="detail-container">
+    <div class="detail-img">
+        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+        <p>All hand-made with natural soy wax, Candleaf is <br>made for your pleasure moments.</p>
+        <h1>🚚 FREE SHIPPING</h1>
+    </div>
+    <div class="detail-purchase">
+
+    </div>
+</div>
 
 {% endblock %}
