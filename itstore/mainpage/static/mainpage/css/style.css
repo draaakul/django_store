@@ -495,7 +495,43 @@ footer {
 
 .detail-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1440px;
+  height: 700px;
 }
+
+.detail-img {
+  width: 540px;
+  height: auto;
+}
+
+.product-img {
+  width: 100%;
+  height: auto;
+  background: #f9f9f9;
+  padding-top: 80px;
+}
+
+
+.detail-img p,
+.detail-img h1 {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.detail-img h1 {
+  color: #56B280;
+}
+
+.detail-purchase {
+  width: 600px;
+  height: auto;
+}
+
 
 
 
