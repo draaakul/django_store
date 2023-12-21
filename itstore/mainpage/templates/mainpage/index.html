@@ -1,23 +1,7 @@
 {% extends 'base.html'%}
 {% load static %}
-<div class="products">
-    {% for product in products %}
-    <div class="product">
-        <div class="product_photo">
-            <img src="{% static 'mainpage/images/image_2023-12-04_23-01-06.png' %}"/>
-        </div>
-        <div class="product_name">
-            <h3 class="product_name_text">{{ product.name }}</h3>
-        </div>
-        <div class="product_menu">
-            <h3> {{ product.price }}$</h3>
-            <button class="buy_button">Купити</button>
-        </div>
-    </div>
-    {% endfor %}
-</div>
-{% block body %}
 
+{% block body %}
 <div class="mainpage-image">
     <div class="mp-text">
         <h1>🌱</h1>
@@ -32,33 +16,14 @@
 </div>
 <div class="prod-container">
     <div class="products">
-        <div class="product">
-            <div class="photo"><img src="{% static 'mainpage/images/spiced_mint.png' %}"></div>
-            <p class="name">Spiced Mint</p>
-            <p class="price">9.99$</p>
-        </div>
-        <div class="product">
-
-        </div>
-        <div class="product">
-
-        </div>
-        <div class="product">
-
-        </div>
-        <div class="product">
-
-        </div>
-        <div class="product">
-
-        </div>
-        <div class="product">
-
-        </div>
-        <div class="product">
-
-        </div>
-
+        {% for product in mainpage_products %}
+        {% include 'mainpage/includes/product.html' %}
+<!--        <div class="product">-->
+<!--            <div class="photo"><img src="{{ product.image.url }}"></div>-->
+<!--            <p class="name">{{ product.name }}</p>-->
+<!--            <p class="price">{{ product.price }}$</p>-->
+<!--        </div>-->
+        {% endfor %}
     </div>
 </div>
 <div class="product-info">
@@ -87,11 +52,7 @@
         <div class="feedback">
             <img class="person" src="{% static 'mainpage/images/luisa.png' %}">
             <div class="stars">
-                <img src="{% static 'mainpage/images/star.png' %}">
-                <img src="{% static 'mainpage/images/star.png' %}">
-                <img src="{% static 'mainpage/images/star.png' %}">
-                <img src="{% static 'mainpage/images/star.png' %}">
-                <img src="{% static 'mainpage/images/star.png' %}">
+                {% include 'mainpage/includes/stars.html' %}
             </div>
             <h1>“I love it! No more air</h1>
             <h2>fresheners”</h2>
@@ -100,11 +61,7 @@
         <div class="feedback">
             <img class="person" src="{% static 'mainpage/images/eduardo.png' %}">
             <div class="stars">
-                <img src="{% static 'mainpage/images/star.png' %}">
-                <img src="{% static 'mainpage/images/star.png' %}">
-                <img src="{% static 'mainpage/images/star.png' %}">
-                <img src="{% static 'mainpage/images/star.png' %}">
-                <img src="{% static 'mainpage/images/star.png' %}">
+                {% include 'mainpage/includes/stars.html' %}
             </div>
             <h1>“Raccomended for </h1>
             <h2>everyone”</h2>
@@ -113,11 +70,7 @@
         <div class="feedback">
             <img class="person" src="{% static 'mainpage/images/mart.png' %}">
             <div class="stars">
-                <img src="{% static 'mainpage/images/star.png' %}">
-                <img src="{% static 'mainpage/images/star.png' %}">
-                <img src="{% static 'mainpage/images/star.png' %}">
-                <img src="{% static 'mainpage/images/star.png' %}">
-                <img src="{% static 'mainpage/images/star.png' %}">
+                {% include 'mainpage/includes/stars.html' %}
             </div>
             <h1>“Looks very natural, the</h1>
             <h2> smell is awesome”</h2>
@@ -130,26 +83,9 @@
     <h1>Popular</h1>
     <h3>Our top selling product that you may like</h3>
     <div class="pop-product">
-        <div class="product">
-            <div class="photo"><img src="{% static 'mainpage/images/spiced_mint.png' %}"></div>
-            <p class="name">Spiced Mint</p>
-            <p class="price">9.99$</p>
-        </div>
-        <div class="product">
-            <div class="photo"><img src="{% static 'mainpage/images/spiced_mint.png' %}"></div>
-            <p class="name">Spiced Mint</p>
-            <p class="price">9.99$</p>
-        </div>
-        <div class="product">
-            <div class="photo"><img src="{% static 'mainpage/images/spiced_mint.png' %}"></div>
-            <p class="name">Spiced Mint</p>
-            <p class="price">9.99$</p>
-        </div>
-        <div class="product">
-            <div class="photo"><img src="{% static 'mainpage/images/spiced_mint.png' %}"></div>
-            <p class="name">Spiced Mint</p>
-            <p class="price">9.99$</p>
-        </div>
+        {% for product in popular_products %}
+        {% include 'mainpage/includes/product.html' %}
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
