@@ -1,6 +1,10 @@
 {% extends 'base.html'%}
 {% load static %}
 
+{% block css %}
+<link type="text/css" href="{% static 'mainpage/css/index.css' %}" rel="stylesheet" />
+{% endblock %}
+
 {% block body %}
 <div class="mainpage-image">
     <div class="mp-text">

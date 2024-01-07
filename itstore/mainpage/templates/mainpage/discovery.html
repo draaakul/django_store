@@ -1,6 +1,10 @@
 {% extends 'base.html'%}
 {% load static %}
 
+{% block css %}
+<link type="text/css" href="{% static 'mainpage/css/discovery.css' %}" rel="stylesheet" />
+{% endblock %}
+
 {% block body %}
 <div class="discovery-products">
     <div class="products">

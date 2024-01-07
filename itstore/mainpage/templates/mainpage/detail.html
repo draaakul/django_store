@@ -1,6 +1,10 @@
 {% extends 'base.html'%}
 {% load static %}
 
+{% block css %}
+<link type="text/css" href="{% static 'mainpage/css/detail.css' %}" rel="stylesheet" />
+{% endblock %}
+
 {% block body %}
 <div class="detail-container">
     <div class="detail-img">

@@ -1,6 +1,10 @@
 {% extends 'base.html'%}
 {% load static %}
 
+{% block css %}
+<link type="text/css" href="{% static 'mainpage/css/about.css' %}" rel="stylesheet" />
+{% endblock %}
+
 {% block body %}
 <div class="page-about-container">
     <div class="page-about">
