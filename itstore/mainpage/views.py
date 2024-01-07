@@ -25,3 +25,17 @@ def detail(request, detail_slug):
         'product': slug_detail,
     }
     return render(request, 'mainpage/detail.html', context=data)
+
+
+def discovery(request):
+    products_data = Product.objects.all()
+    context = {
+        'all_products': products_data,
+    }
+    return render(request, 'mainpage/discovery.html', context=context)
+
+
+def test(request):
+    return render(request, 'mainpage/test.html')
+
+

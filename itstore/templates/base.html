@@ -13,11 +13,11 @@
 <header>
         <nav class="navbar">
             <div class="container">
-                <a href="#"><img src="{% static 'mainpage/images/logo.png' %}" class="logo" alt="Candleaf" /></a>
+                <a href="{% url 'home' %}"><img src="{% static 'mainpage/images/logo.png' %}" class="logo" alt="Candleaf" /></a>
                 <div class="navbar-wrap">
                     <ul class="navbar-menu">
-                        <li><a href="">Discovery</a></li>
-                        <li><a href="">About</a></li>
+                        <li><a href="{% url 'discovery' %}">Discovery</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
                         <li><a href="">Contact us</a></li>
                         <li><a href="">Ukrainian version</a></li>
                     </ul>

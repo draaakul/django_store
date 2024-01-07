@@ -530,8 +530,76 @@ footer {
 .detail-purchase {
   width: 600px;
   height: auto;
+  margin-left: 40px;
+}
+
+.purchase-container {
+  width: 570px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.price-quantity{
+  width: 150px;
+  height: 180px;
+  background: #272727;
+  margin-bottom: 80px;
+}
+
+.purchase-choices{
+  width: 340px;
+  height: 180px;
+  background: #272727;
+  margin-bottom: 80px;
+
+}
+
+.add-to-cart {
+  width: 340px;
+  height: 40px;
+  background: #56B280;
+  color: #FFFFFF;
+  font-size: 20px;
+  border: none;
+  border-radius: 3px;
+  margin-left: 220px;
+  margin-bottom: 40px;
+}
+
+.add-to-cart:hover {
+  background-color:#448f66;
+}
+
+.product-description {
+  width: 540px;
+  height: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: 2px solid #F7F8FA;
+  border-radius: 10px ;
+}
+
+.discovery-products {
+  width: 1300px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-about-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 
-
-
+.page-about {
+  max-width: 1000px ;
+  height: auto;
+  text-align: center;
+  margin-top: 50px ;
+  margin-bottom: 50px;
+}

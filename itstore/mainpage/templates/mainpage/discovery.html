@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block body %}
+<div class="discovery-products">
+    <div class="products">
+        {% for product in all_products %}
+        {% include 'mainpage/includes/product.html' %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
